@@ -1,0 +1,100 @@
+// custom color
+$menuLinksColor: #F5F5DC;
+$mainBgColor: #ffeeff;
+$sidebar-width: 280px;
+
+
+// 行動版 (預設)
+.sideBar {
+  position: fixed;
+  top: 0;
+  width: $sidebar-width;
+  margin-left: -$sidebar-width;
+  transition: margin-left .25s;
+}
+
+.adMain {
+  width: 100%;  
+  transition: margin-left .25s;
+}
+
+.sideBar-toggled {
+  .sideBar {    
+    margin-left: 0;
+  }
+  .adMain {
+    margin-left: $sidebar-width;
+  }
+}
+.productList {
+    list-style: none;    
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }  
+  .productList li a {
+    position: relative;
+    display: block;
+    font-size: 1.2rem;    
+    padding: 20px;   
+    color: #000;
+  }
+  .productList li a:hover {
+    font-weight: bold;
+  }
+  .productList li a.adActive {
+    font-weight: bold;
+  }
+.productList li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffeeff;
+    z-index: -1;
+    transition: .5s ease;
+  }
+  .productList li a:hover::after {
+    width: 100%;
+    border-right: 5px solid #6600ff;
+  }
+  .productList li a.adActive::after {
+    width: 100%;
+    border-right: 5px solid #6600ff;
+  }
+  
+@media (max-width: 280px) {
+  .closeBtn {
+    display: block !important;
+  }
+}
+// pc(up)
+@include media-breakpoint-up(lg) {
+  .sideBar {
+    margin-left: 0;
+    width: $sidebar-width;    
+  }
+  
+  .adMain {
+    width: calc(100vw - $sidebar-width);
+    margin-left: $sidebar-width;
+    transition: margin-left .25s;
+  }
+
+  .sideBar-toggled {
+    .sideBar {
+      margin-left: -$sidebar-width;
+    }
+    .adMain {
+      width: 100%;
+      margin-left: 0;
+    }
+  }  
+}
+
+.logout:hover {
+  color: #f00 !important;
+  font-weight: bold;
+}

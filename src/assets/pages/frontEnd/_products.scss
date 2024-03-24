@@ -1,0 +1,60 @@
+// custom color
+$menuLinksColor: #cc99ff;
+$mainBgColor: #ffeeff;
+
+.product {
+  background: $mainBgColor;
+}
+.productHeader {
+  position: relative;
+  display: block;
+  background-image: url('/img/productBanner/productBanner_01.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  width: 100%;
+  height: 50vh;
+}
+.productHeader::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, $mainBgColor, transparent);
+  z-index: 998;
+}
+
+// productList
+
+.productList {
+  position: sticky;
+  top: 100px;
+  z-index: 998px;
+}
+.productList .active {
+  background: $menuLinksColor !important;
+  border: none !important;
+}
+// productItem
+
+.itemWrap {
+  overflow: hidden;
+}
+.itemWrap img {
+  transition: 1s ease;
+}
+.itemWrap:hover img {
+  transform: scale(1.3, 1.3);
+}
+
+.loveIcon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  z-index: 10;
+  font-size: 2rem;
+  cursor: pointer;  
+}

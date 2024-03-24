@@ -1,0 +1,79 @@
+// custom color
+$menuLinksColor: #F5F5DC;
+$mainBgColor: #ffeeff;
+
+
+
+// info
+.info {
+  background: url(/img/majorBG/bg_repeat.jpg);
+  background-repeat: repeat;  
+}
+.infoHeader {
+  position: relative; 
+  width: 100%;
+  height: 50vh;
+  background-image: url('/img/newInfoBanner/newInfoBanner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment: fixed;
+  background-position: 50% 35.5%;
+  margin-bottom: 50px;
+}
+.infoHeader::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 175px;
+  background: linear-gradient(to top, $mainBgColor, transparent);
+  z-index: 998;
+}
+
+.infoHeader img {
+  position: absolute;
+  top: -53%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.textTitle {
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 1.5rem;
+  color: $mainTextColor;  
+}
+.textTitle span {
+  font-size: 28px;
+}
+.textTitle .textSmall {
+  font-size: 24px;
+  font-weight: 200;
+  letter-spacing: .2rem;
+  line-height: 36px;
+}
+
+// Responsive
+@media (max-width: 500px) {
+  .infoHeader {    
+    width: 100%;
+    height: 25vh;
+    background-position: top;
+  }
+  .infoHeader::before { 
+    height: 5vh;    
+  }
+  .textTitle {
+    font-size: 30px; 
+    letter-spacing: 1.2rem;  
+  }
+  .textTitle span {
+    font-size: 20px;
+  }
+  .textTitle .textSmall {
+    font-size: 16px;    
+    line-height: 24px;
+  }
+}

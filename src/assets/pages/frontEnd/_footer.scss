@@ -1,0 +1,55 @@
+// custom color
+$menuLinksColor: #F5F5DC;
+$majorColor: #9966cc;
+$footerText: #fff;
+
+footer {
+  position: relative;
+  background: $majorColor;
+  color: $footerText;
+}
+
+.footerTop {
+  font-size: 3rem;
+  animation: shake 1s infinite linear;
+}
+@keyframes shake {
+  50% {
+    transform: translateY(20px);
+  }
+}
+.footerTop:hover {
+  animation: none;
+}
+
+.socialIcons {
+  display: flex;  
+  align-items: center;
+  margin-bottom: 0;
+}
+.socialIcons li:not(:last-of-type) {
+  margin-right: 50px;
+}
+
+.socialIcons li a i {
+  font-size: 3rem;
+  color: #fff;  
+}
+
+
+@media (max-width: 767px) {
+  .socialIcons li a i {
+    font-size: 2rem;    
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    padding: 16px;
+  }  
+  .footerTop {
+    font-size: 2.5rem;    
+  }
+  .socialIcons li:not(:last-of-type) {
+    margin-right: 15px;
+  }
+}

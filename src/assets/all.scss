@@ -1,0 +1,27 @@
+@import 'bootstrap/scss/functions';
+
+
+@import './helpes/variables';
+
+
+@import 'bootstrap/scss/bootstrap';
+
+@import './base/base';
+
+@import './pages/frontEnd/header';
+
+@import './pages/frontEnd/home';
+
+@import './pages/frontEnd/info';
+
+@import './pages/frontEnd/products';
+
+@import './pages/frontEnd/singleProduct';
+
+@import './pages/frontEnd/carts';
+
+@import './pages/frontEnd/footer';
+
+@import './pages/frontEnd/login';
+
+@import './pages//dashboard/adProducts';

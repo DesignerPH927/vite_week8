@@ -1,0 +1,36 @@
+// custom color
+$menuLinksColor: #F5F5DC;
+$mainBgColor: #ffeeff;
+
+
+.cart {
+  background: $mainBgColor;
+}
+
+.cartHeader {
+  position: relative;
+  display: block;
+  background-image: url('https://plus.unsplash.com/premium_photo-1661308210772-43d4cdfbeba0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 50vh;
+}
+.cartHeader::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, $mainBgColor, transparent);
+  z-index: 998;
+}
+
+.progressChart {
+  padding: 50px 0;
+  border: 2px solid #000;
+  margin-bottom: 50px;  
+}
