@@ -1,0 +1,1 @@
+.cartDropBox{position:fixed;top:-100%;right:30px;width:450px;z-index:1000;transition:.5s ease}.cartDropBox.showCart{top:80px}@media (max-width: 510px){.cartDropBox{width:100%;right:initial}}
